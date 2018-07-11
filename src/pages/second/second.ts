@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LIST } from '../../mocks/items.mocks';
-// import {SecondPage} from '../second/second'
+import {LIST} from '../../mocks/items.mocks';
+
 
 /**
- * Generated class for the HomePage page.
+ * Generated class for the SecondPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,22 +12,22 @@ import { LIST } from '../../mocks/items.mocks';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-second',
+  templateUrl: 'second.html',
 })
-export class HomePage {
-
+export class SecondPage {
+item = '';
+ToDoList = LIST;
+task:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  
+    this.item = this.navParams.get("task")
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-    
-      
+    console.log('ionViewDidLoad SecondPage');
   }
-  ToDo(){
-    this.navCtrl.push("SecondPage")
+  yourList(){
+    this.navCtrl.push("ResultsPage")
   }
 }

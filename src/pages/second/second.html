@@ -1,0 +1,26 @@
+<!--
+  Generated template for the SecondPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="brown">
+    <ion-title text-center >To Do List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="lt" padding>
+ <ion-list>
+    <ion-item color="coral" *ngFor="let item of ToDoList">{{item.task}}</ion-item>
+ </ion-list>
+    <div id="yl">
+        <button ion-button color="brown" (click)= "yourList()">Add Tasks</button>
+      </div>
+</ion-content>
+<!-- <ion-list>
+    <ion-item color="coral" *ngFor = "let items of ToDoList">{{items.bath}}<br>{{items.listen}}<br> {{items.work}}<br>{{items.code}}<br>{{items.check}}<br> {{items.eat}}<br>{{items.shop}}<br>{{items.friend}}<br>{{items.fifa}}<br>{{items.cook}}<br> </ion-item>
+  </ion-list> -->
